@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -22,6 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.heratale_app.MenuActivity;
 import com.example.heratale_app.R;
 import com.example.heratale_app.ui.login.LoginViewModel;
 import com.example.heratale_app.ui.login.LoginViewModelFactory;
@@ -120,9 +122,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
+        //TODO: doesn't actually look like the displayname is getting set here?
         String welcome = getString(R.string.welcome) + model.getDisplayName();
-        // TODO : initiate successful logged in experience
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
+
+        startActivity(new Intent(LoginActivity.this, MenuActivity.class));
     }
 
     private void showLoginFailed(@StringRes Integer errorString) {
