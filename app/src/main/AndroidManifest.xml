@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Herataleapp">
         <activity android:name=".WordStructuresMainActivity"></activity>
+        <activity android:name=".Contractions"></activity>
         <activity
             android:name=".MenuActivity"
             android:label="@string/title_activity_menu"
