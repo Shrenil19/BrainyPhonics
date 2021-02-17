@@ -29,10 +29,6 @@ class LoginFormState {
         return usernameError;
     }
 
-    @Nullable
-    Integer getPasswordError() {
-        return passwordError;
-    }
 
     boolean isDataValid() {
         return isDataValid;
