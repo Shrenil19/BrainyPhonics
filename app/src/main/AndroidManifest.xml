@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Herataleapp">
-        <activity android:name=".WordStructuresMainActivity"></activity>
-        <activity android:name=".Contractions"></activity>
+        <activity android:name=".WordStructuresMainActivity" />
+
+        <activity android:name=".Contractions" />
         <activity
             android:name=".MenuActivity"
             android:label="@string/title_activity_menu"
@@ -24,6 +25,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver
+            android:name=".ConnectivityChangeReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".InternetConnectionService"
+            android:exported="false"></service>
     </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
 </manifest>
