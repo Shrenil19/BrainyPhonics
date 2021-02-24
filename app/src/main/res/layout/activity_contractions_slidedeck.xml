@@ -18,28 +18,21 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="99dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/back" />
-
-            <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/home"
                 android:layout_width="99dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/home" />
 
             <ImageButton
-                android:id="@+id/imageButton5"
+                android:id="@+id/quiz"
                 android:layout_width="99dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/quiz" />
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/check"
                 android:layout_width="99dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
