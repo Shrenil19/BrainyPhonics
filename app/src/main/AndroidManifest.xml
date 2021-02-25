@@ -25,8 +25,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ContractionsCheck" />
-        <activity android:name=".Quiz" />
+        <receiver
+            android:name=".ConnectivityChangeReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".InternetConnectionService"
+            android:exported="false"></service>
+        
+      <activity android:name=".ContractionsCheck"></activity>
+        <activity android:name=".Quiz"></activity>
     </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
 </manifest>
