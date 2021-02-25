@@ -33,6 +33,9 @@
         <service
             android:name=".InternetConnectionService"
             android:exported="false"></service>
+        
+      <activity android:name=".ContractionsCheck"></activity>
+        <activity android:name=".Quiz"></activity>
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
