@@ -11,6 +11,7 @@
         android:theme="@style/Theme.Herataleapp">
         <activity android:name=".TestJsonActivity"></activity>
         <activity android:name=".WordStructuresMainActivity" />
+        <activity android:name=".ContractionsSubsection" />
         <activity android:name=".Contractions" />
         <activity
             android:name=".MenuActivity"
