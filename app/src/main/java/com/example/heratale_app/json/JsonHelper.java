@@ -21,6 +21,7 @@ public class JsonHelper {
     public JsonHelper(String stu, Context conte) {
         this.program = "5c047ec0aa4bc8db2980b139";
         this.student = stu;
+        this.context = conte;
     }
 
     public void sendFocusItem(int timesTillCorrect, int secondsSpentOnQuestion, String focusID) {
