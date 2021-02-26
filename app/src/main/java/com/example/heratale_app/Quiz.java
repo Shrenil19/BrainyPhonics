@@ -1,5 +1,6 @@
 package com.example.heratale_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,20 +8,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Build;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 import android.widget.Toast;
+import com.example.heratale_app.json.JsonHelper;
 
 public class Quiz extends AppCompatActivity implements View.OnClickListener {
     private Button option1;
     private Button option2;
     private Button option3;
     private Button option4;
+    private ImageButton sendData;
     private TextView question;
     private ImageView stars;
     private int correct = 0;
     private int currentQuestionIdx = 0;
+    private int programID = 69;
+
+    private JsonHelper dataHelper = new JsonHelper("test1", this);
 
     private Question[] questionBank = new Question[] {
             new Question("I'm", "that's", "we'd", "where's", Answer.ONE),
@@ -36,12 +43,14 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
         option2 = findViewById(R.id.button2);
         option3 = findViewById(R.id.button3);
         option4 = findViewById(R.id.button4);
+        sendData = findViewById(R.id.testSendDataButton);
         question = findViewById(R.id.question);
         stars = findViewById(R.id.stars);
         option1.setOnClickListener(this);
         option2.setOnClickListener(this);
         option3.setOnClickListener(this);
         option4.setOnClickListener(this);
+        sendData.setOnClickListener(this);
         updateQuestion();
 
     }
@@ -63,6 +72,10 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.button4:
                 checkAnswer(Answer.FOUR);
+                break;
+            case R.id.testSendDataButton:
+                dataHelper.sendFocusItem(1, 30, "5c1c3e5b2cd7cdda36e3fa57");
+                startActivity(new Intent(Quiz.this, Contractions.class));
                 break;
         }
     }

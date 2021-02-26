@@ -21,6 +21,14 @@ public class WordStructuresMainActivity extends AppCompatActivity {
                 startActivity(new Intent(WordStructuresMainActivity.this, Contractions.class));
             }
         });
+
+        Button data_testing = findViewById(R.id.button11);
+        data_testing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(WordStructuresMainActivity.this, TestJsonActivity.class));
+            }
+        });
     }
 
 
