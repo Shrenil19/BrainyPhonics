@@ -42,5 +42,4 @@ public class Contractions extends AppCompatActivity {
             }
         });
     }
-
 }

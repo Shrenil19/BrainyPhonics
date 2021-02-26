@@ -19,7 +19,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintTop_toBottomOf="@+id/stars" />
 
     <Button
         android:id="@+id/button4"
@@ -63,7 +63,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintTop_toBottomOf="@+id/stars" />
 
     <ImageView
         android:id="@+id/stars"
@@ -75,7 +75,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/question"
-        app:srcCompat="@drawable/five_stars" />
+        app:srcCompat="@drawable/stars0" />
 
     <TextView
         android:id="@+id/question"
@@ -88,7 +88,7 @@
         android:layout_marginTop="42dp"
         android:text=" Which word is a contraction with are or with am?"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintBottom_toTopOf="@+id/stars"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

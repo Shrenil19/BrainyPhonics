@@ -83,33 +83,9 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
         option3.setText(questionBank[currentQuestionIdx].getOption3());
         option4.setText(questionBank[currentQuestionIdx].getOption4());
 
-        switch(correct) {
-            case 0:
-                stars.setImageResource(R.drawable.zero_stars);
-                break;
-
-            case 1:
-                stars.setImageResource(R.drawable.one_star);
-                break;
-
-            case 2:
-                stars.setImageResource(R.drawable.two_stars);
-                break;
-
-            case 3:
-                stars.setImageResource(R.drawable.three_stars);
-                break;
-
-            case 4:
-                stars.setImageResource(R.drawable.four_stars);
-                break;
-
-            case 5:
-                stars.setImageResource(R.drawable.five_stars);
-                break;
-
-        }
-
+        String img_name =  "stars" + Integer.toString(correct);
+        int resourceId = getResources().getIdentifier(img_name, "drawable", getPackageName());
+        stars.setImageResource(resourceId);
     }
 
 }
