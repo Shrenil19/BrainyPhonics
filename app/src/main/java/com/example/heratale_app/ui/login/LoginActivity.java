@@ -25,15 +25,19 @@ import android.widget.Toast;
 
 import com.example.heratale_app.MenuActivity;
 import com.example.heratale_app.R;
+import com.example.heratale_app.json.JsonHelper;
 import com.example.heratale_app.ui.login.LoginViewModel;
 import com.example.heratale_app.ui.login.LoginViewModelFactory;
 
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
+    private JsonHelper jsonHelper;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        jsonHelper = new JsonHelper("", this);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         loginViewModel = new ViewModelProvider(this, new LoginViewModelFactory())
@@ -67,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                     showLoginFailed(loginResult.getError());
                 }
                 if (loginResult.getSuccess() != null) {
-                    updateUiWithUser(loginResult.getSuccess());
+                    updateUiWithUser(loginResult.getSuccess(), usernameEditText.getText().toString());
                 }
                 setResult(Activity.RESULT_OK);
 
@@ -113,11 +117,12 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void updateUiWithUser(LoggedInUserView model) {
+    private void updateUiWithUser(LoggedInUserView model, String usernameEditText) {
         //TODO: doesn't actually look like the displayname is getting set here?
         String welcome = getString(R.string.welcome) + model.getDisplayName();
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
 
+        jsonHelper.initJson(usernameEditText);
         startActivity(new Intent(LoginActivity.this, MenuActivity.class));
     }
 
