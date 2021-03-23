@@ -77,7 +77,7 @@ public class JsonHelper {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // This responce will have Json Format String
+        // This response will have Json Format String
         String objString = stringBuilder.toString();
         JSONObject topLvl;
         String userString = "";

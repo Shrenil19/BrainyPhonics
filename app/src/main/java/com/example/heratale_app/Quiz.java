@@ -75,7 +75,7 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
                 break;
             case R.id.testSendDataButton:
                 dataHelper.sendFocusItem(1, 30, "5c1c3e5b2cd7cdda36e3fa57");
-                startActivity(new Intent(Quiz.this, Contractions.class));
+                startActivity(new Intent(Quiz.this, ContractionsCheck.class));
                 break;
         }
     }
@@ -96,7 +96,11 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
         option3.setText(questionBank[currentQuestionIdx].getOption3());
         option4.setText(questionBank[currentQuestionIdx].getOption4());
 
-        String img_name =  "stars" + Integer.toString(correct);
+        int num_stars = correct;
+        if (correct < 5) {
+            num_stars = 5;
+        }
+        String img_name =  "stars" + Integer.toString(num_stars);
         int resourceId = getResources().getIdentifier(img_name, "drawable", getPackageName());
         stars.setImageResource(resourceId);
     }

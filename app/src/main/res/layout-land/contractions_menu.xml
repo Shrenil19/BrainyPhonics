@@ -19,13 +19,15 @@
                 android:id="@+id/home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/home" />
+                app:srcCompat="@drawable/home"
+                android:background="@android:color/transparent" />
 
             <ImageButton
                 android:id="@+id/check"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/check" />
+                app:srcCompat="@drawable/check"
+                android:background="@android:color/transparent" />
         </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout

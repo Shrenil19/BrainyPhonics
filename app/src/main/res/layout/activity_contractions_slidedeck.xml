@@ -1,93 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:paddingTop="@dimen/activity_vertical_margin">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_width="414dp"
+        android:layout_height="736dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="-5dp">
 
         <LinearLayout
-            android:layout_width="206dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="584dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/prev"
+                    android:layout_width="128dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/back" />
+
+                <TextView
+                    android:id="@+id/lesson"
+                    android:layout_width="214dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/activity_vertical_margin"
+                    android:paddingRight="@dimen/activity_vertical_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:text="Pronoun contractions with am add 'm and contraction with are add 're." />
+
+                <ImageButton
+                    android:id="@+id/next"
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/next" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="617dp"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/slide1l" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="645dp"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/slide2l" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="647dp"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/slide3l" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="636dp"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/slide4l" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="637dp"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/slide5l" />
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="565dp"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/slide6l" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="444dp"
+            android:layout_weight="1">
+
             <ImageButton
                 android:id="@+id/home"
+                style="@style/Widget.AppCompat.ImageButton"
                 android:layout_width="99dp"
-                android:layout_height="40dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:cropToPadding="false"
+                android:scaleType="fitStart"
                 app:srcCompat="@drawable/home" />
 
             <ImageButton
                 android:id="@+id/quiz"
                 android:layout_width="99dp"
-                android:layout_height="40dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitStart"
                 app:srcCompat="@drawable/quiz" />
 
             <ImageButton
                 android:id="@+id/check"
                 android:layout_width="99dp"
-                android:layout_height="40dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitStart"
                 app:srcCompat="@drawable/check" />
 
         </LinearLayout>
-
-        <HorizontalScrollView
-            android:layout_width="557dp"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
-
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="804dp"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/slide1l" />
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="816dp"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/slide2l" />
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="776dp"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/slide3l" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="779dp"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/slide4l" />
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="772dp"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/slide5l" />
-
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="753dp"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/slide6l" />
-
-
-            </LinearLayout>
-        </HorizontalScrollView>
 
     </LinearLayout>
 
