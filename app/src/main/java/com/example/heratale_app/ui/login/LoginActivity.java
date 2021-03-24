@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -37,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         jsonHelper = new JsonHelper("", this);
+        jsonHelper.initJson("");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
@@ -122,7 +124,8 @@ public class LoginActivity extends AppCompatActivity {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
 
-        jsonHelper.initJson(usernameEditText);
+        Log.d("ABCA", usernameEditText);
+        jsonHelper.studentLogin(usernameEditText);
         startActivity(new Intent(LoginActivity.this, MenuActivity.class));
     }
 
