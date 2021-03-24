@@ -62,40 +62,75 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/imageView0"
                         android:layout_width="617dp"
                         android:layout_height="match_parent"
-                        app:srcCompat="@drawable/slide1l" />
+                        app:srcCompat="@drawable/contractions_0_0" />
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="645dp"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/contractions_0_1" />
 
                     <ImageView
                         android:id="@+id/imageView2"
-                        android:layout_width="645dp"
+                        android:layout_width="647dp"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/slide2l" />
+                        app:srcCompat="@drawable/contractions_0_2" />
 
                     <ImageView
                         android:id="@+id/imageView3"
-                        android:layout_width="647dp"
+                        android:layout_width="636dp"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/slide3l" />
+                        app:srcCompat="@drawable/contractions_0_3" />
 
                     <ImageView
                         android:id="@+id/imageView4"
-                        android:layout_width="636dp"
+                        android:layout_width="637dp"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/slide4l" />
+                        app:srcCompat="@android:drawable/screen_background_light" />
 
                     <ImageView
                         android:id="@+id/imageView5"
-                        android:layout_width="637dp"
+                        android:layout_width="565dp"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/slide5l" />
+                        app:srcCompat="@android:drawable/screen_background_light" />
 
                     <ImageView
                         android:id="@+id/imageView6"
-                        android:layout_width="565dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/slide6l" />
+                        android:layout_weight="1"
+                        app:srcCompat="@android:drawable/screen_background_light" />
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@android:drawable/screen_background_light" />
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@android:drawable/screen_background_light" />
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@android:drawable/screen_background_light" />
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@android:drawable/screen_background_light" />
 
                 </LinearLayout>
             </HorizontalScrollView>
