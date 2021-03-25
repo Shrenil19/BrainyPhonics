@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -34,10 +35,12 @@ public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
     private JsonHelper jsonHelper;
+    private static Context context;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        jsonHelper = new JsonHelper("", this);
+        this.context = getApplicationContext();
+        jsonHelper = new JsonHelper("", LoginActivity.context);
         jsonHelper.initJson("");
 
         super.onCreate(savedInstanceState);
