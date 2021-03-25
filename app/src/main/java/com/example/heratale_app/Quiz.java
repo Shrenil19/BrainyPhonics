@@ -1,5 +1,6 @@
 package com.example.heratale_app;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -26,8 +27,9 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
     private int correct = 0;
     private int currentQuestionIdx = 0;
     private int programID = 69;
+    private static Context context;
 
-    private JsonHelper dataHelper = new JsonHelper("test1", this);
+    private JsonHelper dataHelper;
 
     private Question[] questionBank = new Question[] {
             new Question("I'm", "that's", "we'd", "where's", Answer.ONE),
@@ -38,6 +40,8 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.context = getApplicationContext();
+        dataHelper = new JsonHelper("test1", Quiz.context);
         setContentView(R.layout.quiz);
         option1 = findViewById(R.id.button1);
         option2 = findViewById(R.id.button2);
