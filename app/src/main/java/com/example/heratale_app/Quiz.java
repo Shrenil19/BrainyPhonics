@@ -15,6 +15,7 @@ import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 import android.widget.Toast;
 import com.example.heratale_app.json.JsonHelper;
+import android.os.Handler;
 
 public class Quiz extends AppCompatActivity implements View.OnClickListener {
     private Button option1;
@@ -28,6 +29,9 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
     private int currentQuestionIdx = 0;
     private int programID = 69;
     private static Context context;
+    private int seconds = 0;
+    private int tries = 0;
+    private boolean running;
 
     private JsonHelper dataHelper;
 
@@ -55,8 +59,12 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
         option3.setOnClickListener(this);
         option4.setOnClickListener(this);
         sendData.setOnClickListener(this);
+        if (!running) {
+            seconds = 0;
+            running = true;
+            runTimer();
+        }
         updateQuestion();
-
     }
 
     @Override
@@ -77,6 +85,7 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
             case R.id.button4:
                 checkAnswer(Answer.FOUR);
                 break;
+
             case R.id.testSendDataButton:
                 dataHelper.sendFocusItem(1, 30, "5c1c3e5b2cd7cdda36e3fa57");
                 startActivity(new Intent(Quiz.this, ContractionsCheck.class));
@@ -86,10 +95,14 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
 
     private void checkAnswer(Answer chosen) {
         Answer answer = questionBank[currentQuestionIdx].getAnswer();
-
+        System.out.println(seconds);
+        tries++;
         if (chosen == answer) {
             correct++;
             currentQuestionIdx = (currentQuestionIdx + 1) % (questionBank.length - 1);
+            dataHelper.sendFocusItem(tries, seconds, "fake");
+            seconds = 0;
+            tries = 0;
             updateQuestion();
         }
     }
@@ -107,6 +120,17 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
         String img_name =  "stars" + Integer.toString(num_stars);
         int resourceId = getResources().getIdentifier(img_name, "drawable", getPackageName());
         stars.setImageResource(resourceId);
+    }
+
+    private void runTimer() {
+        final Handler handler = new Handler();
+
+        handler.post(new Runnable() {
+            public void run() {
+                seconds++;
+                handler.postDelayed(this, 1000);
+            }
+        });
     }
 
 }
