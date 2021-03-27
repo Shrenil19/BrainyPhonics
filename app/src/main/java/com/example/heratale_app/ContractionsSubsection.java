@@ -15,16 +15,18 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class ContractionsSubsection extends AppCompatActivity {
 
-    String[] lessonstrs = new String[]{
-            "Pronoun contractions with am add 'm and contraction with are add 're.", //1
-            "Pronoun contractions is add 's.", //2
-            "Pronoun contraction with will add 'll.", //3
-            "To make a contraction with would just add 'd at the end of the pronoun.", //4
-            "Contractions with have add 've.", //5
+    String[] lessonstrs = new String[] {
+            "Pronoun contractions with am add 'm and contraction with are add 're.", //0
+            "Pronoun contractions is add 's.", //1
+            "Pronoun contraction with will add 'll.", //2
+            "To make a contraction with would just add 'd at the end of the pronoun.", //3
+            "Contractions with have add 've.", //4
             "Contractions with not add n't, except for that troublemaker will not which becomes won't.", //5
             "Noun contractions with is add 's.", //6
             "Be careful! Noun contractions with is add 's, but remember that nouns also use 's for a completely different reason, to show possession.", //7
-            "" //8
+            "Pronouns use an apostrophe to show a contraction with a verb like am, or is, or are, or will, or would, or have, and verbs also use an apostrophe to" +
+                    "show a contraction with the word not. Remember that pronouns use an apostrophe to show a contraction with a verb, but pronouns never use an " +
+                    "apostrophe to show possession, to show something belongs." //8
     };
     private TextView lessonstr;
     private ImageButton home;
@@ -61,14 +63,9 @@ public class ContractionsSubsection extends AppCompatActivity {
         imageView8 = findViewById(R.id.imageView8);
         imageView9 = findViewById(R.id.imageView9);
         imageView10 = findViewById(R.id.imageView10);
-        System.out.println(lessonstr.getText().toString());
-        if (lessonstr.getText().toString() == ("Pronoun contractions with am add 'm and contraction with are add 're.")) {
-            System.out.println("hi");
-        }
+
         if (lessonstr.getText().toString().equals("Pronoun contractions with am add 'm and contraction with are add 're.") && RunTimeData.section != 0) {
             updateImages();
-        } else {
-            System.out.println("not");
         }
 
         home = findViewById(R.id.home);
@@ -120,7 +117,6 @@ public class ContractionsSubsection extends AppCompatActivity {
         int[] resourceId = new int[11];
         int lesson = RunTimeData.section;
         String img_name;
-        System.out.println("hey");
         for (int a = 0; a < 11; a++) {
             try {
                 img_name = "contractions_" + lesson + "_" + a;
@@ -128,7 +124,6 @@ public class ContractionsSubsection extends AppCompatActivity {
             } catch (Exception e) {
                 resourceId[a] = getResources().getIdentifier("screen_background_light","drawable", getPackageName());
             }
-            System.out.println(a);
         }
         imageView0.setImageResource(resourceId[0]);
         imageView1.setImageResource(resourceId[1]);

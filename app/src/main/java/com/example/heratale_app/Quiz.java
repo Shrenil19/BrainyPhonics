@@ -100,7 +100,7 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
         if (chosen == answer) {
             correct++;
             currentQuestionIdx = (currentQuestionIdx + 1) % (questionBank.length - 1);
-            dataHelper.sendFocusItem(tries, seconds, "fake");
+            dataHelper.sendFocusItem(tries, seconds, "fake"); // need to change focusID
             seconds = 0;
             tries = 0;
             updateQuestion();
