@@ -90,6 +90,11 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
                 dataHelper.sendFocusItem(1, 30, "5c1c3e5b2cd7cdda36e3fa57");
                 startActivity(new Intent(Quiz.this, ContractionsCheck.class));
                 break;
+
+            case R.id.bank:
+                System.out.println("trying");
+                startActivity(new Intent(Quiz.this, PiggyBank.class));
+                break;
         }
     }
 

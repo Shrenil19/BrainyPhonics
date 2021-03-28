@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PiggyBank">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="589dp"
+        android:layout_marginEnd="253dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="253dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="210dp"
+        android:layout_height="167dp"
+        android:layout_marginBottom="47dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginLeft="264dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="194dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/piggybank_earned" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="210dp"
+        android:layout_height="167dp"
+        android:layout_marginBottom="59dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginLeft="264dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="47dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/piggybank_available" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="210dp"
+        android:layout_height="167dp"
+        android:layout_marginBottom="84dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginLeft="264dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:srcCompat="@drawable/piggybank_spent" />
+
+    <TextView
+        android:id="@+id/earned_coins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="TextView"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.746"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.277" />
+
+    <TextView
+        android:id="@+id/available_coins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="TextView"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.712"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572" />
+
+    <TextView
+        android:id="@+id/spent_coins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="TextView"
+        android:textColor="#23DF0B0B"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView13"
+        app:layout_constraintHorizontal_bias="0.771"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.861" />
+
+    <TableLayout
+        android:layout_width="166dp"
+        android:layout_height="455dp"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="197dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

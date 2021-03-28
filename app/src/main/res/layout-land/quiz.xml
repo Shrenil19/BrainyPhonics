@@ -17,11 +17,11 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/bank"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/bank" />
+                tools:srcCompat="@drawable/bank" />
 
             <ImageView
                 android:id="@+id/home"
