@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TextView;
@@ -15,16 +16,22 @@ public class PiggyBank extends AppCompatActivity {
     private int spent;
     private int available;
 
-    Button back = this.findViewById(R.id.back);
-    TextView earned_coins = this.findViewById(R.id.earned_coins);
-    TextView available_coins = this.findViewById(R.id.available_coins);
-    TextView spent_coins = this.findViewById(R.id.spent_coins);
-    TableLayout table = this.findViewById(R.id.table);
+    ImageButton back;
+    TextView earned_coins;
+    TextView available_coins;
+    TextView spent_coins;
+    TableLayout table;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_piggy_bank);
+
+        back = this.findViewById(R.id.back);
+        earned_coins = this.findViewById(R.id.earned_coins);
+        available_coins = this.findViewById(R.id.available_coins);
+        spent_coins = this.findViewById(R.id.spent_coins);
+        table = this.findViewById(R.id.table);
 
         this.earned = 50; //TODO: set this with JSON data
         this.spent = 10;
