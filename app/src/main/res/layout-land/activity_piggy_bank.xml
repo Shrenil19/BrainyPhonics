@@ -15,24 +15,21 @@
         android:layout_marginLeft="33dp"
         android:layout_marginRight="556dp"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="81dp"
+        android:background="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/back" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="210dp"
         android:layout_height="167dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="12dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/back"
         app:layout_constraintEnd_toStartOf="@+id/imageView12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -43,10 +40,10 @@
         android:layout_width="210dp"
         android:layout_height="167dp"
         android:layout_marginBottom="228dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView13"
@@ -60,15 +57,16 @@
         android:layout_width="210dp"
         android:layout_height="167dp"
         android:layout_marginBottom="228dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/piggybank_spent" />
 
     <TextView
@@ -77,24 +75,31 @@
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:text="TextView"
+        android:textColor="#050404"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:typeface="sans"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="86dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/available_coins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="336dp"
-        android:layout_marginStart="336dp"
         android:fontFamily="casual"
         android:text="TextView"
         android:textColor="#4CAF50"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:typeface="sans"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="86dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+        app:layout_constraintEnd_toEndOf="@+id/imageView12"
+        app:layout_constraintStart_toStartOf="@+id/imageView12"
+        app:layout_constraintTop_toTopOf="@+id/imageView12" />
 
     <TextView
         android:id="@+id/spent_coins"
@@ -102,41 +107,26 @@
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:text="TextView"
-        android:textColor="#23DF0B0B"
+        android:textColor="#D79C0505"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:typeface="sans"
-        tools:layout_editor_absoluteX="573dp"
-        tools:layout_editor_absoluteY="86dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+        app:layout_constraintEnd_toEndOf="@+id/imageView13"
+        app:layout_constraintStart_toStartOf="@+id/imageView13"
+        app:layout_constraintTop_toTopOf="@+id/imageView13"
+        app:layout_constraintVertical_bias="0.503" />
 
-    <TableLayout
+    <LinearLayout
         android:id="@+id/table"
-        android:layout_width="533dp"
-        android:layout_height="210dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="18dp"
+        android:layout_width="513dp"
+        android:layout_height="172dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/back"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </TableLayout>
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"></LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
