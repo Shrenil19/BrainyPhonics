@@ -18,79 +18,88 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/bank"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:srcCompat="@drawable/bank" />
-
-            <ImageView
                 android:id="@+id/home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/home" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/testSendDataButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/check" />
+
+            <ImageButton
+                android:id="@+id/bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/bank" />
         </LinearLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="588dp"
+        <LinearLayout
+            android:layout_width="597dp"
             android:layout_height="match_parent"
-            app:layout_constraintBottom_toTopOf="@+id/button3"
-            app:layout_constraintTop_toTopOf="@+id/button3">
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="286dp"
-                android:layout_height="68dp"
-                android:text="option 3"
-                tools:layout_editor_absoluteX="298dp"
-                tools:layout_editor_absoluteY="205dp" />
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="283dp"
-                android:layout_height="73dp"
-                android:text="option 4"
-                tools:layout_editor_absoluteX="300dp"
-                tools:layout_editor_absoluteY="272dp" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="286dp"
-                android:layout_height="72dp"
-                android:text="option 2"
-                tools:layout_editor_absoluteX="5dp"
-                tools:layout_editor_absoluteY="273dp" />
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="286dp"
-                android:layout_height="72dp"
-                android:text="option 1"
-                tools:layout_editor_absoluteX="5dp"
-                tools:layout_editor_absoluteY="205dp" />
-
-            <ImageView
-                android:id="@+id/stars"
-                android:layout_width="390dp"
-                android:layout_height="68dp"
-                app:srcCompat="@drawable/stars0"
-                tools:layout_editor_absoluteX="99dp"
-                tools:layout_editor_absoluteY="123dp" />
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/question"
-                android:layout_width="332dp"
-                android:layout_height="68dp"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
                 android:text=" Which word is a contraction with are or with am?"
-                android:textSize="18sp"
-                tools:layout_editor_absoluteX="128dp"
-                tools:layout_editor_absoluteY="33dp" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/stars"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                app:srcCompat="@drawable/stars0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="option 1" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/activity_vertical_margin"
+                    android:text="option 2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="option 3" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="93dp"
+                    android:layout_weight="1"
+                    android:text="option 4" />
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

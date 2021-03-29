@@ -103,7 +103,7 @@
 
             <ImageButton
                 android:id="@+id/testSendDataButton"
-                android:layout_width="142dp"
+                android:layout_width="136dp"
                 android:layout_height="153dp"
                 android:background="@android:color/transparent"
                 android:scaleType="center"
@@ -111,17 +111,18 @@
 
             <ImageButton
                 android:id="@+id/home"
-                android:layout_width="147dp"
+                android:layout_width="138dp"
                 android:layout_height="153dp"
                 android:background="@android:color/transparent"
                 app:srcCompat="@drawable/home" />
 
             <ImageButton
                 android:id="@+id/bank"
-                android:layout_width="0dp"
-                android:layout_height="154dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                tools:srcCompat="@drawable/bank" />
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/bank" />
 
         </LinearLayout>
     </LinearLayout>
