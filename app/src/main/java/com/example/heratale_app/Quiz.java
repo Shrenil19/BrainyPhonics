@@ -22,6 +22,7 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
     private Button option2;
     private Button option3;
     private Button option4;
+    private ImageButton bank;
     private ImageButton sendData;
     private TextView question;
     private ImageView stars;
@@ -52,6 +53,7 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
         option3 = findViewById(R.id.button3);
         option4 = findViewById(R.id.button4);
         sendData = findViewById(R.id.testSendDataButton);
+        bank = findViewById(R.id.bank);
         question = findViewById(R.id.question);
         stars = findViewById(R.id.stars);
         option1.setOnClickListener(this);
@@ -59,6 +61,8 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
         option3.setOnClickListener(this);
         option4.setOnClickListener(this);
         sendData.setOnClickListener(this);
+        bank.setOnClickListener(this);
+
         if (!running) {
             seconds = 0;
             running = true;
@@ -92,7 +96,6 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
                 break;
 
             case R.id.bank:
-                System.out.println("trying");
                 startActivity(new Intent(Quiz.this, PiggyBank.class));
                 break;
         }
