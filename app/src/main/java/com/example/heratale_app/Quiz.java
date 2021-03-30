@@ -24,6 +24,7 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
     private Button option4;
     private ImageButton bank;
     private ImageButton sendData;
+    private ImageButton home;
     private TextView question;
     private ImageView stars;
     private int correct = 0;
@@ -55,6 +56,7 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
         sendData = findViewById(R.id.testSendDataButton);
         bank = findViewById(R.id.bank);
         question = findViewById(R.id.question);
+        home = findViewById(R.id.home);
         stars = findViewById(R.id.stars);
         option1.setOnClickListener(this);
         option2.setOnClickListener(this);
@@ -62,6 +64,7 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
         option4.setOnClickListener(this);
         sendData.setOnClickListener(this);
         bank.setOnClickListener(this);
+        home.setOnClickListener(this);
 
         if (!running) {
             seconds = 0;
@@ -98,12 +101,15 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
             case R.id.bank:
                 startActivity(new Intent(Quiz.this, PiggyBank.class));
                 break;
+
+            case R.id.home:
+                startActivity(new Intent(Quiz.this, MenuActivity.class));
+                break;
         }
     }
 
     private void checkAnswer(Answer chosen) {
         Answer answer = questionBank[currentQuestionIdx].getAnswer();
-        System.out.println(seconds);
         tries++;
         if (chosen == answer) {
             correct++;
