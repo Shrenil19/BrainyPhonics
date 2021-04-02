@@ -54,6 +54,9 @@ public class JsonHelper {
                 topLvl.put("client_token", "");
                 topLvl.put("student_id", "");
                 topLvl.put("focus_items", new JSONArray());
+                topLvl.put("coins_earned", 0);
+                topLvl.put("coins_current", 0);
+                topLvl.put("coins_spent", 0);
 
                 userString = topLvl.toString();
             } catch (JSONException e) {
@@ -233,6 +236,34 @@ public class JsonHelper {
         });
 
         queue.add(stuLogRequest);
+    }
+
+    public void updateCoins(int earned, int current, int spent) { //relative pos/neg values for updating each or all values, leave 0 if no change
+        JSONObject topLvl = retrieveTopLevel();
+        Log.d("ABCX", topLvl.toString());
+
+        try { //write to object
+            int totEarned = topLvl.getInt("coins_earned");
+            int totCurrent = topLvl.getInt("coins_current");
+            int totSpent = topLvl.getInt("coins_spent");
+
+            totEarned += earned;
+            totCurrent += current;
+            totSpent += spent;
+
+            topLvl.remove("coins_earned");
+            topLvl.remove("coins_current");
+            topLvl.remove("coins_spent");
+
+            topLvl.put("coins_earned", totEarned);
+            topLvl.put("coins_current", totCurrent);
+            topLvl.put("coins_spent", totSpent);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        sendTopLevel(topLvl);
+        Log.d("ABCY", topLvl.toString());
     }
 
 }
