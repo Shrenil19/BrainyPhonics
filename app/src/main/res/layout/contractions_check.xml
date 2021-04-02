@@ -10,9 +10,11 @@
         android:layout_width="142dp"
         android:layout_height="54dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="27dp"
         android:fontFamily="sans-serif-black"
         android:text="Contractions"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/m_re"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="256dp" />
 
@@ -22,26 +24,44 @@
         android:layout_height="30dp"
         android:ems="10"
         android:text="'d"
-        tools:layout_editor_absoluteX="254dp"
-        tools:layout_editor_absoluteY="281dp" />
+        app:layout_constraintBottom_toTopOf="@+id/ve"
+        app:layout_constraintTop_toBottomOf="@+id/ll"
+        tools:layout_editor_absoluteX="254dp" />
 
     <TextView
         android:id="@+id/m_re"
         android:layout_width="155dp"
         android:layout_height="32dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="27dp"
         android:ems="10"
         android:text="'m and 're"
-        tools:layout_editor_absoluteX="254dp"
-        tools:layout_editor_absoluteY="97dp" />
+        app:layout_constraintBottom_toTopOf="@+id/s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/m_re_stars"
+        app:layout_constraintTop_toBottomOf="@+id/contractions" />
 
     <TextView
         android:id="@+id/s"
         android:layout_width="134dp"
         android:layout_height="25dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="26dp"
         android:ems="10"
         android:text="@string/s"
-        tools:layout_editor_absoluteX="254dp"
-        tools:layout_editor_absoluteY="156dp" />
+        app:layout_constraintBottom_toTopOf="@+id/ll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/s_stars"
+        app:layout_constraintTop_toBottomOf="@+id/m_re" />
 
     <TextView
         android:id="@+id/ll"
@@ -49,8 +69,10 @@
         android:layout_height="24dp"
         android:ems="10"
         android:text="'ll"
-        tools:layout_editor_absoluteX="254dp"
-        tools:layout_editor_absoluteY="222dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.392"
+        tools:layout_editor_absoluteX="254dp" />
 
     <TextView
         android:id="@+id/noun_contractions"
@@ -65,85 +87,93 @@
         android:id="@+id/c_not_p"
         android:layout_width="145dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
         android:ems="10"
         android:text="contractions not possessives"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="519dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.925" />
 
     <TextView
         android:id="@+id/ve"
         android:layout_width="107dp"
         android:layout_height="27dp"
+        android:layout_marginBottom="36dp"
         android:ems="10"
         android:text="'ve"
-        tools:layout_editor_absoluteX="254dp"
-        tools:layout_editor_absoluteY="341dp" />
+        app:layout_constraintBottom_toTopOf="@+id/nt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toEndOf="@+id/ve_stars" />
 
     <ImageView
         android:id="@+id/noun_stars"
         android:layout_width="234dp"
         android:layout_height="61dp"
+        app:layout_constraintTop_toBottomOf="@+id/ve_stars"
         app:srcCompat="@drawable/samplestars"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="388dp" />
+        tools:layout_editor_absoluteX="5dp" />
 
     <ImageView
         android:id="@+id/c_not_p_stars"
         android:layout_width="234dp"
         android:layout_height="61dp"
+        app:layout_constraintTop_toBottomOf="@+id/noun_stars"
         app:srcCompat="@drawable/samplestars"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="449dp" />
+        tools:layout_editor_absoluteX="5dp" />
 
     <ImageView
         android:id="@+id/c_not_p_stars2"
         android:layout_width="234dp"
         android:layout_height="61dp"
+        android:layout_marginBottom="33dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:srcCompat="@drawable/samplestars"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="510dp" />
+        tools:layout_editor_absoluteX="5dp" />
 
     <ImageView
         android:id="@+id/m_re_stars"
         android:layout_width="234dp"
         android:layout_height="61dp"
+        android:layout_marginTop="82dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/samplestars"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="83dp" />
+        tools:layout_editor_absoluteX="5dp" />
 
     <ImageView
         android:id="@+id/s_stars"
         android:layout_width="234dp"
         android:layout_height="61dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/m_re_stars"
         app:srcCompat="@drawable/samplestars"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="144dp" />
+        tools:layout_editor_absoluteX="5dp" />
 
     <ImageView
         android:id="@+id/ll_stars"
         android:layout_width="234dp"
         android:layout_height="61dp"
+        app:layout_constraintTop_toBottomOf="@+id/s_stars"
         app:srcCompat="@drawable/samplestars"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="205dp" />
+        tools:layout_editor_absoluteX="5dp" />
 
     <ImageView
         android:id="@+id/d_stars"
         android:layout_width="234dp"
         android:layout_height="61dp"
+        app:layout_constraintTop_toBottomOf="@+id/ll_stars"
         app:srcCompat="@drawable/samplestars"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="266dp" />
+        tools:layout_editor_absoluteX="5dp" />
 
     <ImageView
         android:id="@+id/ve_stars"
         android:layout_width="234dp"
         android:layout_height="61dp"
+        app:layout_constraintTop_toBottomOf="@+id/d_stars"
         app:srcCompat="@drawable/samplestars"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="327dp" />
+        tools:layout_editor_absoluteX="5dp" />
 
     <TextView
         android:id="@+id/nt"
