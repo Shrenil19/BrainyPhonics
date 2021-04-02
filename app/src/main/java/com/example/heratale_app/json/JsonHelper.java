@@ -37,7 +37,7 @@ public class JsonHelper {
         this.context = conte;
 
         //Volley Initiation
-        queue = Volley.newRequestQueue(context);
+        queue = Volley.newRequestQueue(this.context);
         url = "https://teacherportal.hearatale.com/api/"; //CHANGE THIS FOR YOUR USAGE
     }
 
@@ -194,7 +194,7 @@ public class JsonHelper {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // This responce will have Json Format String
+        // This response will have Json Format String
         return stringBuilder.toString();
     }
 

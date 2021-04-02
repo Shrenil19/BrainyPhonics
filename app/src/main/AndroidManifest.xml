@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.heratale_app">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Herataleapp">
-        <activity android:name=".TestJsonActivity"></activity>
+        <activity android:name=".PiggyBank"></activity>
+        <activity android:name=".TestJsonActivity" />
         <activity android:name=".WordStructuresMainActivity" />
         <activity android:name=".ContractionsSubsection" />
         <activity android:name=".Contractions" />
@@ -28,21 +27,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".ContractionsCheck" />
+
+        <activity android:name=".Quiz" />
+
         <receiver
             android:name=".ConnectivityChangeReceiver"
             android:enabled="true"
             android:exported="true" />
-
         <service
             android:name=".InternetConnectionService"
-            android:exported="false"></service>
-        
-      <activity android:name=".ContractionsCheck"></activity>
-        <activity android:name=".Quiz"></activity>
+            android:exported="false" />
     </application>
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
