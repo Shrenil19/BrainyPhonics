@@ -47,7 +47,7 @@
                 android:id="@+id/s_stars"
                 android:layout_width="234dp"
                 android:layout_height="61dp"
-                app:srcCompat="@drawable/samplestars" />
+                app:srcCompat="@drawable/stars0" />
 
             <TextView
                 android:id="@+id/s"
@@ -66,7 +66,7 @@
                 android:id="@+id/ll_stars"
                 android:layout_width="234dp"
                 android:layout_height="61dp"
-                app:srcCompat="@drawable/samplestars" />
+                app:srcCompat="@drawable/stars0" />
 
             <TextView
                 android:id="@+id/ll"
@@ -85,7 +85,7 @@
                 android:id="@+id/d_stars"
                 android:layout_width="234dp"
                 android:layout_height="61dp"
-                app:srcCompat="@drawable/samplestars" />
+                app:srcCompat="@drawable/stars0" />
 
             <TextView
                 android:id="@+id/d"
@@ -104,7 +104,7 @@
                 android:id="@+id/ve_stars"
                 android:layout_width="234dp"
                 android:layout_height="61dp"
-                app:srcCompat="@drawable/samplestars" />
+                app:srcCompat="@drawable/stars0" />
 
             <TextView
                 android:id="@+id/ve"
@@ -123,7 +123,7 @@
                 android:id="@+id/nt_stars"
                 android:layout_width="234dp"
                 android:layout_height="61dp"
-                app:srcCompat="@drawable/samplestars" />
+                app:srcCompat="@drawable/stars0" />
 
             <TextView
                 android:id="@+id/nt"
@@ -141,7 +141,7 @@
                 android:id="@+id/c_not_p_stars"
                 android:layout_width="234dp"
                 android:layout_height="61dp"
-                app:srcCompat="@drawable/samplestars" />
+                app:srcCompat="@drawable/stars0" />
 
             <TextView
                 android:id="@+id/c_not_p"
@@ -160,7 +160,7 @@
                 android:id="@+id/noun_stars"
                 android:layout_width="234dp"
                 android:layout_height="61dp"
-                app:srcCompat="@drawable/samplestars" />
+                app:srcCompat="@drawable/stars0" />
 
             <TextView
                 android:id="@+id/noun_contractions"

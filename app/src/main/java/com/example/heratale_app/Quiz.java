@@ -128,7 +128,7 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener {
         option4.setText(questionBank[currentQuestionIdx].getOption4());
 
         int num_stars = correct;
-        if (correct < 5) {
+        if (correct > 5) {
             num_stars = 5;
         }
         String img_name =  "stars" + Integer.toString(num_stars);
