@@ -1,14 +1,14 @@
 # BrainyPhonics
 An application dedicated towards providing lectures and quizzes to underprivileged elementary school students in a fun and interactive way.
 
-# Motivation
+### Motivation
 The purpose of this project is to provide an app version of the already existing BrainyPhonics web application. This app runs on Androids and serves to mimic the web application precisely, offering no advantage over the web application or vice versa.
 
-# System Architecture
+### System Architecture
 This project uses a model-view-controller architecture - the models are used to represent entities including the User, Question, Answer, etc. The views are used to provide a kid-friendly interface. The controllers are used to grab data from the Data Analytics Platform, an offline database used to grab assets and information pertaining to classes and quizzes.
 
-# Cloud Server Access
-An instance of the Data Analytics Platofrm is currently running on a cloud server, which can be accessed by any device connected to the internet with the proper authentication. Once connected to the server, please refer to the documentation of the DAP which is included below.
+### Cloud Server Access
+An instance of the Data Analytics Platform is currently running on a cloud server, which can be accessed by any device connected to the internet with the proper authentication. Once connected to the server, please refer to the documentation of the DAP which is included below.
 
 Review the Information on the Wiki to get an overview of setting up external Apps to use the DAP
 [https://github.com/BrainyEducation/Brainy-Kids/wiki](https://github.com/BrainyEducation/Brainy-Kids/wiki)
@@ -18,8 +18,29 @@ To modify the connection to the server ip to the instance's static IP: 45.76.254
 Cloud Server Static IP: 45.76.254.167
 @root user
 
+# Delivery Documentation
 
-# Installation
+### Release Notes (as of V1, 23 April 2021)
+- NEW FEATURES
+  - blah
+- BUG FIXES
+  - blah
+- KNOWN BUGS
+  - blah
+
+### Installation
+- PREREQUISITES
+  - blah
+- DEPENDENCIES
+  - blah
+- DOWNLOAD
+  - blah
+- BUILD
+  - blah
+- INSTALLATION
+  - blah
+- HOW TO RUN
+  - blah
 In order to run this project, JetBrains Toolbox, Gradle, and Android Studio must be installed. Once all of these are installed, clone this repository and open it on Android Studio. Press run in order to have the emulator run the app.
 
 # Credits
