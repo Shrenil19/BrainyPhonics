@@ -35,7 +35,7 @@ PREREQUISITES:
   - [CHECKING FOR DEFAULT DEPENDENCIES] be sure to check your build.gradle to ensure your Android Studio supports JUnitRunner, Espresso, and ConstraintLayouts. Also be sure you have access to the java.lang.Object.BroadcastReceiver component
   
 DEPENDENCIES
-  - this app uses v1.2.0 of Volley, a REST client for Java that makes use of the JSONObject and JSONArrays
+  - this app uses v1.2.0 of Volley, a REST client for Java that makes use of the JSONObject and JSONArray objects
   
 DOWNLOAD
   - Clone this repository (git clone git@github.com:Shrenil19/BrainyPhonics.git
