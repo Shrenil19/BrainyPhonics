@@ -1,6 +1,7 @@
 package com.example.heratale_app.data;
 
 import com.example.heratale_app.data.model.LoggedInUser;
+import com.example.heratale_app.json.JsonHelper;
 
 import java.io.IOException;
 
@@ -10,7 +11,6 @@ import java.io.IOException;
 public class LoginDataSource {
 
     public Result<LoggedInUser> login(String username) {
-
         try {
             // TODO: handle loggedInUser authentication
             LoggedInUser fakeUser =

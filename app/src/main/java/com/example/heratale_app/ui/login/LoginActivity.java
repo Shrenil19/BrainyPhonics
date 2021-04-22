@@ -124,11 +124,14 @@ public class LoginActivity extends AppCompatActivity {
 
     private void updateUiWithUser(LoggedInUserView model, String usernameEditText) {
         //TODO: doesn't actually look like the displayname is getting set here?
-        String welcome = getString(R.string.welcome) + model.getDisplayName();
+        jsonHelper.studentLogin(usernameEditText);
+        String displayName = jsonHelper.getDisplayName();
+
+        String welcome = getString(R.string.welcome) + displayName + "!";
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
 
         Log.d("ABCA", usernameEditText);
-        jsonHelper.studentLogin(usernameEditText);
+        //jsonHelper.studentLogin(usernameEditText);
         startActivity(new Intent(LoginActivity.this, MenuActivity.class));
     }
 

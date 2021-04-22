@@ -201,8 +201,10 @@ public class JsonHelper {
         return stringBuilder.toString();
     }
 
-    public void studentLogin(String id) {
+    public String[] studentLogin(String id) {
         JSONObject studentID = new JSONObject();
+        final String[] stuName = new String[1];
+
         try {
             studentID.put("id", id);
         } catch (JSONException e) {
@@ -210,14 +212,20 @@ public class JsonHelper {
         }
 
         JsonObjectRequest stuLogRequest = new JsonObjectRequest(Request.Method.POST, url + "session/student", studentID, new Response.Listener<JSONObject>() {
+
+
             @Override
             public void onResponse(JSONObject response) {
                 JSONObject topLvl = retrieveTopLevel();
-                Log.d("ABCX", topLvl.toString());
+
 
                 try { //write to object
+                    stuName[0] = response.getJSONObject("student").get("student_name").toString();
+                    Log.d("ABCX", stuName[0].toString());
+
                     topLvl.remove("student_id");
                     topLvl.put("student_id", id);
+                    topLvl.put("student_name", stuName[0]);
 
                     topLvl.remove("client_token");
                     topLvl.put("client_token", response.get("token"));
@@ -227,6 +235,7 @@ public class JsonHelper {
 
                 sendTopLevel(topLvl);
                 Log.d("ABCY", topLvl.toString());
+                return;
             }
         }, new Response.ErrorListener() {
             @Override
@@ -236,6 +245,7 @@ public class JsonHelper {
         });
 
         queue.add(stuLogRequest);
+        return stuName;
     }
 
     public void updateCoins(int earned, int current, int spent) { //relative pos/neg values for updating each or all values, leave 0 if no change
@@ -264,6 +274,21 @@ public class JsonHelper {
 
         sendTopLevel(topLvl);
         Log.d("ABCY", topLvl.toString());
+    }
+
+    public String getDisplayName() {
+        JSONObject topLvl = retrieveTopLevel();
+        //Log.d("ABCX", topLvl.toString());
+        String display = "";
+
+        try { //write to object
+            display = topLvl.get("student_name").toString();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        Log.d("ABCY", display);
+        return display;
     }
 
 }
