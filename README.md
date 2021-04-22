@@ -35,25 +35,25 @@ PREREQUISITES:
   - [BACKEND] MongoDb (pointing to remote access cloud server above)
   - [BACKEND] npm (Run npm --version in your terminal and expect to see a version number printed out)
   
-- DEPENDENCIES
+DEPENDENCIES
   - blah
   
-- DOWNLOAD
+DOWNLOAD
   - blah
   
-- BUILD
+BUILD
   - blah
   
-- INSTALLATION:
+INSTALLATION:
   - Clone this repository (git clone git@github.com:Shrenil19/BrainyPhonics.git
   - [BACKEND] To install local backend instance, clone this repository (git clone git@github.com:jvt/Brainy-Kidz.git) and follow instructions on: https://github.com/jvt/Brainy-Kids
   - Ensure whichever method (local, Team 357 Cloud, or Client Cloud) of backend connection is properly configured in the app at: BrainyPhonics/app/src/main/java/com/example/heratale_app/json/JsonHelper.java 
   
-- HOW TO RUN:
+HOW TO RUN:
   1. In Android Studio, select your app from the run/debug configurations drop-down menu in the toolbar.
   2. In the toolbar, select the device that you want to run your app on from the target device drop-down menu.
   
-- TESTING:
+TESTING:
     -From a terminal window, run npm run test or npm test (both do the same thing)
     -Let the tests run, it will generate a coverage window in the terminal once all the tests have completed running
 In order to run this project, JetBrains Toolbox, Gradle, and Android Studio must be installed. Once all of these are installed, clone this repository and open it on Android Studio. Press run in order to have the emulator run the app.
